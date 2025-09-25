@@ -1,0 +1,18 @@
+body{
+    background-color:#2a2a40 ;
+}
+section{
+    background-color: #2a2a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#resenhaconteudo{
+    background-color: #1e1e2f;
+    width: 500px;
+    padding: 10px;
+    border-radius: 9px;
+    color: #e0e0e0;
+    font-family: serif;
+}
