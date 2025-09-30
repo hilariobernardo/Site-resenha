@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Resenhas</title>
 </head>
+
 <body>
-    <section>
-        <div id="resenhaconteudo">
-            <p>Resenha Novocaine: À prova de dor <br><br>
 
-O filme parte de uma premissa muito boa mas não aproveita muito bem. O roteirista perde o rumo em varios momentos e entrega o principal plot cedo demais, tirando o impacto da reviravolta. <br>
+    <body>
+        <div class="container">
+            <h1>🎬 Reviews de Filmes</h1>
 
-A sensação é que o filme poderia ter acabado na metade, sem contar a decepção de entregar a reviravolta “de bandeja” sem nenhum preparo ou até mesmo vontade real de surpreender, porém apesar desses problemas ele não é um filme ruim só teve o potencial desperdiçado é mais um filme de comédia que de ação, se não fosse pelo gore seria um ótimo filme pra passar na sessão da tarde.
-<br>
-No fim das contas minha nota é 6,5/10.</p>
+            <button class="add-review-btn" onclick="abrirModal()">
+                + Adicionar Review
+            </button>
+
+
+            <div class="modal-overlay" id="modalOverlay">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Novo Review</h2>
+                        <button class="close-btn" onclick="fecharModal()">&times;</button>
+                    </div>
+
+                    <form onsubmit="adicionarReview(event)">
+                        <div class="form-group">
+                            <label for="titulo">Título do Filme</label>
+                            <input type="text" id="titulo" placeholder="Ex: Matrix (1999)" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentario">Seu Comentário</label>
+                            <textarea id="comentario" placeholder="Escreva sua opinião sobre o filme..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Publicar Review</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="reviews-list" id="reviewsList"></div>
         </div>
-    </section>
-</body>
+        <script src="script.js"></script>
+    </body>
+
 </html>
